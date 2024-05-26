@@ -16,8 +16,13 @@ TEAM MEMBERS:
 4. Sumanth
 5. Durga Prasad
 
-   
-https://github.com/DinishaReddy/Interv/assets/87869022/a449b528-8d83-4406-865b-9cd0a3a59ed4
+<div><h1>Project video</h1></div>
+
+
+
+
+
+
 
 
 
@@ -28,14 +33,34 @@ https://github.com/DinishaReddy/Interv/assets/87869022/a449b528-8d83-4406-865b-9
 <h1>project details</h1>
 <h3>this is the login page of interv</h3>
 
-<img width="862" alt="Screenshot 2024-05-26 at 11 45 44 AM" src="https://github.com/DinishaReddy/Interv/assets/87869022/a734ea00-a459-4059-80f3-2c38723452ca">
+
+<img width="1440" alt="Screenshot 2024-05-26 at 3 46 32 PM" src="https://github.com/DinishaReddy/Interv/assets/87869022/1697e00f-820e-4528-a1d9-71ca3f28359d">
+
+
+
 
 <div><h1>After the login the students portfolio page is displayed</h1></div>
 
 
+<img width="1440" alt="Screenshot 2024-05-26 at 3 47 18 PM" src="https://github.com/DinishaReddy/Interv/assets/87869022/65dcb21d-91b9-4d55-b48d-dcd490a67c2a">
 
 
 
+<img width="1440" alt="Screenshot 2024-05-26 at 3 48 26 PM" src="https://github.com/DinishaReddy/Interv/assets/87869022/6b57343c-9715-4c91-9451-f9f8d9d678a0">
+
+
+<img width="1440" alt="Screenshot 2024-05-26 at 3 48 38 PM" src="https://github.com/DinishaReddy/Interv/assets/87869022/b7f7dbd6-25cd-4c87-8a3a-e4b762a04d60">
+
+
+
+<img width="1440" alt="Screenshot 2024-05-26 at 3 49 03 PM" src="https://github.com/DinishaReddy/Interv/assets/87869022/6b931764-cb66-47c9-bcd6-2dbec21df47a">
+
+
+
+<div><h1> After the portfolio another login page appears </h1></div>
+
+
+<img width="862" alt="Screenshot 2024-05-26 at 11 45 44 AM" src="https://github.com/DinishaReddy/Interv/assets/87869022/a734ea00-a459-4059-80f3-2c38723452ca">
 <div><h1>The student is required to choose department </h1></div>
 
 
