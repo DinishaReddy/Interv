@@ -1,7 +1,8 @@
-This is a demo of our prototype
+                               Interv
 
-We have made our project using a tool called FIGMA we have made frames and build everything from scratch 
+our project is to help students enhance their skills and also test there skills by providing roadmaps and mock interviews
 
+also help companies take an effective interview by providing an video conference interface with integrated compilers and github
 
 
 
