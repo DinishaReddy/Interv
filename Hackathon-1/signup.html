@@ -1,0 +1,112 @@
+<!-- <?php
+// Check if the form is submitted
+if ($conn->query($sql) === TRUE) {
+    // User inserted successfully
+    // Redirect or display success message
+} else {
+    // Error inserting user
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve user input from the form
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Your database connection details
+    $servername = "localhost"; // Change this to your MySQL server hostname
+    $db_username = "root"; // Change this to your MySQL username
+    $db_password = ""; // Change this to your MySQL password
+    $database = "login-system"; // Change this to the name of your MySQL database
+
+    // Create a connection to the database
+    $conn = new mysqli($servername, $db_username, $db_password, $database);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Hash the password
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    // Prepare SQL statement to insert user into database
+    $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashed_password')";
+
+    // Execute SQL query
+    if ($conn->query($sql) === TRUE) {
+        // User inserted successfully, redirect to login page
+        header("Location: index.html?signup=success");
+        exit();
+    } else {
+        // Error inserting user, redirect back to signup page with error message
+        header("Location: signup.html?error=database_error");
+        exit();
+    }
+
+    // Close database connection
+    $conn->close();
+} else {
+    // If the form is not submitted, redirect back to signup page
+    header("Location: signup.html");
+    exit();
+}
+?> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <div class="intro">
+        <video autoplay loop muted plays-inline class="bg">
+            <source src="images/intro.mp4" type="video/mp4">
+        </video>
+    </div>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form id="signup">
+                    <a href="#" id="cross"><ion-icon name="close-outline" size="large"></ion-icon></a>
+                    <h2>Sign Up</h2>
+                    <div class="inputbox">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input type="text" name="username" required>
+                        <label for="">Username</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="logi">
+                        <button type="submit">Sign Up</button>
+                    </div>
+                    <div class="register">
+                        <p>Already have an account?<a href="login.html">Log In</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.getElementById('signup').addEventListener('submit', function (e) {
+            e.preventDefault();
+            window.location.href ='login.html';
+        });
+    </script>
+</body>
+
+</html>

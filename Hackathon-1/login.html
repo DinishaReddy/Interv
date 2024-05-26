@@ -1,0 +1,109 @@
+<!-- <?php
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve user input from the form
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Your database connection details
+    $servername = "localhost"; // Change this to your MySQL server hostname
+    $username = "root";
+    $password_db = "";
+    $database = "login-system"; 
+
+    // Create a connection to the database
+    $conn = new mysqli($servername, $username, $password_db, $database);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Prepare SQL statement to retrieve user from database
+    $sql = "SELECT * FROM users WHERE email = '$email'";
+
+    // Execute SQL query
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // User found, verify password
+        $row = $result->fetch_assoc();
+        if (password_verify($password, $row['password'])) {
+            // Password is correct, redirect to dashboard or some other page
+            header("Location: dashboard.php"); // Change this to the desired redirect location
+            exit();
+        } else {
+            // Invalid password, redirect back to login page with error message
+            header("Location: index.html?error=invalid_credentials");
+            exit();
+        }
+    } else {
+        // User not found, redirect back to login page with error message
+        header("Location: index.html?error=user_not_found");
+        exit();
+    }
+
+    // Close database connection
+    $conn->close();
+} else {
+    // If the form is not submitted, redirect back to login page
+    header("Location: index.html");
+    exit();
+}
+?> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="login.css">
+
+<body>
+    <div class="intro">
+        <video autoplay loop muted plays-inline class="bg">
+            <source src="images/intro.mp4" type="video/mp4">
+        </video>
+    </div>
+    <section>
+
+        <div class="form-box">
+
+            <div class="form-value">
+                <form id="signup">
+                    <a href="#" id="cross"><ion-icon name="close-outline" size="large"></ion-icon></a>
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="email" required>
+                        <label for="">Email/Phone</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="Password" name="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="forget">
+                        <label for=""><input type="checkbox">Remember me!! <a href="#">Forgot Password</a></label>
+                    </div>
+                    <div class="logi"><button type="submit">log in</button></div>
+                    <div class="register">
+                        <p>Don't have an account?<a href="signup.html">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+    document.getElementById('signup').addEventListener('submit', function (e) {
+        e.preventDefault();
+        window.location.href ='Home.html';
+    });
+</script>
+
+</html>
